@@ -7,8 +7,7 @@ stopBtn.addEventListener('click', onStopBtnClick);
 
 function onStartBtnClick() {
   timerId = setInterval(() => {
-    document.body.style.background = getRandomHexColor();
-    console.log(`I love async JS!  ${getRandomHexColor()}`);
+    document.body.style.backgroundColor = getRandomHexColor();
   }, 1000);
 
   startBtn.setAttribute('disabled', true);
@@ -17,7 +16,6 @@ function onStartBtnClick() {
 
 function onStopBtnClick() {
   clearInterval(timerId);
-  console.log(`Interval with id ${timerId} has stopped!`);
   startBtn.removeAttribute('disabled');
   stopBtn.setAttribute('disabled', true);
 }
