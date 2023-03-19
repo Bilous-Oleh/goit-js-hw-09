@@ -10,15 +10,14 @@ function onStartBtnClick() {
   timerId = setInterval(() => {
     document.body.style.backgroundColor = getRandomHexColor();
   }, DELAY);
-
-  startBtn.setAttribute('disabled', true);
-  stopBtn.removeAttribute('disabled');
+  startBtn.disabled = true;
+  stopBtn.disabled = false;
 }
 
 function onStopBtnClick() {
   clearInterval(timerId);
-  startBtn.removeAttribute('disabled');
-  stopBtn.setAttribute('disabled', true);
+  startBtn.disabled = false;
+  stopBtn.disabled = true;
 }
 function getRandomHexColor() {
   return `#${Math.floor(Math.random() * 16777215)
