@@ -7,6 +7,9 @@ body {
     Oxygen-Sans, Ubuntu, Cantarell, 'Helvetica Neue', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  justify-content: center;
+  align-items: center;
+  font-size: 24px;
   background-color: #fafafa;
   color: #212121;
   line-height: 1.5;
@@ -15,4 +18,53 @@ body {
 img {
   display: block;
   max-width: 100%;
+}
+
+
+.timer {
+  display: flex;
+  width: 100%;
+  max-width: 70%;
+  margin-top: 20px;
+  margin-right: 20px;
+}
+
+.field {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(0, 0, 0, 0.1);
+  border: 5px solid rgba(255, 255, 255, 0.3);
+  width: 140px;
+  height: 140px;
+  border-radius: 99px;
+  margin-right: 20px;
+}
+
+.days,
+.hours,
+.minutes,
+.seconds {
+  font-size: 24px;
+  margin: 10px 0;
+}
+
+
+.label {
+  text-transform: uppercase;
+  margin-bottom: 5px;
+}
+
+@media (max-width: 800px) {
+
+  .timer {
+    max-width: 90%;
+  }
+
+  .field {
+    font-size: 12px;
+    width: 100px;
+    height: 100px;
+  }
 }
