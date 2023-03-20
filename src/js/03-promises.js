@@ -26,7 +26,6 @@ function handleCreatePromise(event) {
   let { delay, step, amount } = formElements;
 
   for (let i = 1; i <= amount; i += 1) {
-    delay += step;
     createPromise(i, delay)
       .then(({ position, delay }) => {
         Notify.success(`✅ Fulfilled promise ${position} in ${delay}ms`);
@@ -34,6 +33,7 @@ function handleCreatePromise(event) {
       .catch(({ position, delay }) => {
         Notify.failure(`❌ Rejected promise ${position} in ${delay}ms`);
       });
+    delay += step;
     formEl.reset();
   }
 }
